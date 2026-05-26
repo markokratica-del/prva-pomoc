@@ -1,0 +1,10 @@
+
+// ovaj kod ubacim u power shell i dobijem ono sto hocu
+
+
+Get-ChildItem "C:\Users\skola\Desktop\4EIT_A17_EvidencijaVozila" -Recurse | ForEach-Object {
+    $now = Get-Date
+    $_.CreationTime = $now
+    $_.LastWriteTime = $now
+    $_.LastAccessTime = $now
+}
